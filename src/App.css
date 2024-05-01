@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg) scale(1);
+    opacity   : 1;
+  }
+  50%{
+    transform: rotate(180deg) scale(0.5);
+    opacity: 0.5;
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+.App-logo {
+  height: 8vh;
+  top: 0%;
+  left: 42vh;
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin 1s infinite linear;
+  }
+}
+
+
+
+.App-header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 0, 0);
+} 
+
+.App-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.App-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+  
+}
+.App-link {
+  color: #f80303;
+  z-index: 3;
+}
+
+#SignBox{
+  color: #ffffff;
+  border-radius: 0vh;
+  background-color: #1f6db6;
+}
+
+#SignBox:hover{
+  transition: 1s;
+  border-radius: 17vh;
+  color: black;
+  background-color: #e91d1d;
+}
+
+.App-Testing {
+  background-color: purple;
+  min-height: 25vh;
+  display: flexbox;
+  font-size: calc(10px+2vmin);
+  color: yellowgreen;
+}
+
+
+.Boxe {
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+#passengers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#passengers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#passengers tr:nth-child(even){background-color: #f2f2f2;}
+
+#passengers tr:hover {background-color: #ddd;}
+
+#passengers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
