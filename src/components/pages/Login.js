@@ -13,13 +13,14 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const defaultTheme = createTheme();
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
 export default function LogIn() {
-  
+  const history = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -36,7 +37,7 @@ export default function LogIn() {
         alert('Password is incorrect')
       }
       else if(response.data === 'correct'){
-        
+        history('/home')
       }
       else{
         console.log(response)
@@ -78,7 +79,7 @@ export default function LogIn() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Log in
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
@@ -120,7 +121,7 @@ export default function LogIn() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/sign" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

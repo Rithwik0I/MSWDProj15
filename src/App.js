@@ -10,10 +10,11 @@ import MyButton from './useless/clickehero.js';
 import { bgcolor } from '@mui/system';
 import RegisterAircraft from './components/pages/RegisterAircraft.js';
 import GetUsers from './components/pages/getUsers.js';
-import Main from './components/pages/Home.js';
+import Main from './components/pages/Main.js';
 import Drawee from './components/drawee.js';
 import Topper from './components/header.js';
 import CreateFlight from './components/pages/CreateFlight.js';
+import Home from './components/pages/Home.js';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/sign/' element={<SignUp />}></Route>
         <Route path='/registeraircraft/' element={<RegisterAircraft />}></Route>
         <Route path='/getusers/' element={<GetUsers />}></Route>
+        <Route path='/home/' element={<Home />}></Route>
         </Routes>
       </BrowserRouter>
       </div>
