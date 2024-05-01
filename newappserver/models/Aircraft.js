@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const AirplaneSchema = new mongoose.Schema({
-    planecode: String,
-    departairpot: String,
     arriveairport: String,
+    depart: String,
+    planecode: String,
     seats: Number,
 })
 
