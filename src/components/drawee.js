@@ -20,6 +20,19 @@ import MenuIcon from "@mui/icons-material/Menu";
     {
       return '/createflight/'
     }
+    else if(index==1)
+    {
+      return '/getusers'
+    }
+    else if(index==2)
+    {
+      return '/login'
+    }
+    else if(index==3)
+    {
+      return '/sign'
+    }
+
   }
 
   export default function Drawee() {
@@ -31,7 +44,7 @@ import MenuIcon from "@mui/icons-material/Menu";
     const DrawerList = (
       <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
         <List>
-          {['Create a Flight', 'Starred', 'Log in as Admin', 'Log in as Airline'].map((text, index) => (
+          {['Create a Flight', 'View users', 'Log in', 'Register'].map((text, index) => (
             <a href={Gootoo(index)}>
             <ListItem key={text} disablePadding onClick={Gootoo(index)}>
               <ListItemButton>

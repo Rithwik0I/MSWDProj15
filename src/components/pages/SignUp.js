@@ -60,7 +60,7 @@ export default function Signup() {
     }
     else
     {
-      axios.get('http://localhost:8081/sign', {fname: fname, lname: lname, uname: uname, email: email, phone: phone, passport: passport, password: password})
+      axios.post('http://localhost:8081/sign', {fname: fname, lname: lname, uname: uname, email: email, phone: phone, passport: passport, password: password})
       .then( response => {
         console.log(response.data)
       })
@@ -109,7 +109,7 @@ export default function Signup() {
                 id='fname'
                 label='First Name'
                 name='fname'
-                value = {fname}
+                value = {fname || ''}
                 onChange={(e) => setFname(e.target.value)}
                 />
                 </Grid>
@@ -119,7 +119,7 @@ export default function Signup() {
               id="lname"
               label="Last Name"
               name='lname'
-              value={lname}
+              value={lname || ''}
               onChange={(e) => setLname(e.target.value)}
             />
                 </Grid>
@@ -130,7 +130,7 @@ export default function Signup() {
                 id='uname'
                 label='Username'
                 name='uname'
-                value={uname}
+                value={uname || ''}
                 onChange={(e) => setUname(e.target.value)}
               />
             </Grid>
@@ -144,7 +144,7 @@ export default function Signup() {
                 name="email"
                 autoComplete="email"
                 autoFocus
-                value={email}
+                value={email || ''}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </Grid>
@@ -158,7 +158,7 @@ export default function Signup() {
                 name="phone"
                 autoComplete="phone"
                 autoFocus
-                value={phone}
+                value={phone || ''}
                 onChange={(e) => setPhone(e.target.value)}
               />
             </Grid>
@@ -171,7 +171,7 @@ export default function Signup() {
                 label="Passport Number"
                 name="passport"
                 autoFocus
-                value={passport}
+                value={passport || ''}
                 onChange={(e) => setPassport(e.target.value)}
               />
             </Grid>
@@ -185,7 +185,7 @@ export default function Signup() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-                value={password}
+                value={password || ''}
                 onChange={(e) => setPassword(e.target.value)}
               />
                 </Grid>
@@ -194,12 +194,12 @@ export default function Signup() {
                 margin="normal"
                 required
                 fullWidth
-                name="password"
+                name="password2"
                 label="Confirm Password"
                 type="password"
-                id="password"
+                id="password2"
                 autoComplete="current-password"
-                value={password2}
+                value={password2 || ''}
                 onChange={(e) => setPassword2(e.target.value)}
               />
                 </Grid>

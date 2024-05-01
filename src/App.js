@@ -15,6 +15,7 @@ import Drawee from './components/drawee.js';
 import Topper from './components/header.js';
 import CreateFlight from './components/pages/CreateFlight.js';
 import Home from './components/pages/Home.js';
+import GetFlights from './components/pages/getFlights.js';
 
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route path='/registeraircraft/' element={<RegisterAircraft />}></Route>
         <Route path='/getusers/' element={<GetUsers />}></Route>
         <Route path='/home/' element={<Home />}></Route>
+        <Route path='/viewflights/' element={<GetFlights />}></Route>
         </Routes>
       </BrowserRouter>
       </div>

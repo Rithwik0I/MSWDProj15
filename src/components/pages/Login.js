@@ -36,11 +36,9 @@ export default function LogIn() {
       else if (response.data === 'Password Incorrect'){
         alert('Password is incorrect')
       }
-      else if(response.data === 'correct'){
-        history('/home')
-      }
       else{
-        console.log(response)
+        const uname = response.data.uname
+        history('/home',{state:{id:uname}})
       }
 
     }).catch(err=>{console.log(err)})

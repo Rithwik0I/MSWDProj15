@@ -34,10 +34,6 @@ export default function Topper() {
 				</Button>
 			</a>
 			</Typography>
-				
-				<a href="/login">
-				<Button sx={{color:'white'}}>Login</Button>
-				</a>
 			</Toolbar>
 		</AppBar>
 	);
